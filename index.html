@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <h1>Bienvenue, je suis <span class="highlight">Kévin Nsamè</span></h1>
+  <p>chef de projet digital • Créatif • Innovateur</p>
+  <nav>
+    <a href="#about">À propos</a>
+    <a href="projets.html">Projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+  <section id="about" style="text-align: justify;">
+  <h2 style="text-align: left;">À propos</h2>
+
+  <div style="display: flex; align-items: center; gap: 30px;">
+    
+    <!-- Bloc texte -->
+    <div style="flex: 1;">
+      <p>
+        Je suis Kevin Nsamè, un professionnel engagé de 25 ans, passionné par le digital, le storytelling et l’innovation. Mon objectif est de créer des expériences digitales pertinentes qui connectent durablement les marques à leurs audiences.
+      </p>
+      <p>
+        Mon parcours a débuté en 2020 dans l’assurance, où j’ai appris l’importance de l’écoute, de la compréhension client et de la confiance. Rapidement, je me suis orienté vers le marketing digital, convaincu que chaque projet est une opportunité de raconter une histoire impactante.
+      </p>
+      <p>
+        De la création de contenus à la maîtrise des outils SEO, SEA et analytics, j’ai développé un savoir-faire alliant créativité et rigueur. Jusqu’en janvier 2025, j’ai occupé le poste de Chargé de Marketing Digital chez AMADA Europe, où j’ai piloté des projets innovants en conjuguant stratégie et technique, tout en poursuivant mes formations pour rester à la pointe des évolutions numériques.
+      </p>
+      <p>
+        Aujourd’hui, je suis à la recherche d’une nouvelle opportunité professionnelle où je pourrai mettre à profit mes compétences, mon sens du relationnel et ma capacité d’adaptation, afin de contribuer efficacement à la réussite des projets digitaux.
+      </p>
+
+      <!-- Bouton Télécharger CV -->
+   <a href="assets/docs/Marketing_&_Communication_digital.pdf" download style="
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: transparent;
+  color: #ff3cac;
+  border: 2px solid #ff3cac;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(255, 60, 172, 0.4);
+  transition: all 0.3s ease;
+" 
+onmouseover="this.style.backgroundColor='#ff3cac'; this.style.color='white'; this.style.boxShadow='0 6px 16px rgba(255, 60, 172, 0.6)';" 
+onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ff3cac'; this.style.boxShadow='0 4px 12px rgba(255, 60, 172, 0.4)';">
+  Télécharger mon CV
+</a>
+
+
+    </div>
+    <!-- Bloc image -->
+    <div style="flex: 0 0 300px;">
+      <img src="assets/images/profil_portfolio.png" alt="Photo de profil" style="width: 84%; height: auto; border-radius: 8px;">
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+ <section id="projects">
+  <h2><a href="projets.html" style="color: inherit; text-decoration: none;">Projets</a></h2>
+
+  <div class="projects-grid">
+    <a href="projets.html#projet1" style="text-decoration: none; color: inherit;">
+  <div class="project-card">
+    <h3>Projet 1</h3> 
+    <p>Créations visuelles.</p>
+  </div>
+</a>
+
+    <a href="projets.html#projet2" style="text-decoration: none; color: inherit;">
+  <div class="project-card">
+    <h3>Projet 2</h3>
+    <p>Création et administration des sites internet.</p>
+  </div>
+</a>
+
+    <a href="projets.html#projet2" style="text-decoration: none; color: inherit;">
+    <div class="project-card">
+      <h3>Projet 3</h3>
+      <p>Langages de programmation et webmarketing.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <section id="contact">
+  <h2><a href="contact.html" style="color: inherit; text-decoration: none;">contact</a></h2>
+  <p>Vous voulez collaborer ? Écrivez-moi !</p>
+  <button onclick="window.location.href='contact.html'">Me Contacter</button>
+</section>
+
+
+  <footer>
+    <p>© 2025 Kevin Nsamè - Tous droits réservés</p>
+  </footer>
+</body>
+</html>

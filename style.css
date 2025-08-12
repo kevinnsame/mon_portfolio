@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.highlight {
+  color: #ff3cac;
+  text-shadow: 0 0 10px #ff3cac;
+}
+
+header {
+  text-align: center;
+  padding: 3em 1em;
+  background: linear-gradient(135deg, #ff3cac, #784ba0, #2b86c5);
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.2em;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #e0e0e0;
+}
+
+nav {
+  margin-top: 1em;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff3cac;
+  text-shadow: 0 0 8px #ff3cac;
+}
+
+/* Sections centrées mais texte aligné à gauche */
+section {
+  padding: 3em 2em;       /* espace intérieur */
+  max-width: 1000px;      /* largeur max */
+  margin: 0 auto;         /* centre le bloc */
+  text-align: left;       /* texte aligné à gauche */
+}
+
+section p {
+  text-align: justify;    /* justifie le texte */
+  margin-bottom: 1.5em;
+}
+
+h2 a:hover {
+  color: #ff3cac;  
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0 0 8px #ff3cac;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+}
+
+.project-card {
+  background-color: #1a1a1a;
+  padding: 1.5em;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 60, 172, 0.3);
+  min-height: 150px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #ff3cac;
+}
+
+button {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #ff3cac;
+  color: #ff3cac;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff3cac;
+  color: #0f0f0f;
+  box-shadow: 0 0 15px #ff3cac;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+  color: #b3b3b3;
+  border-top: 1px solid #333;
+}
+
+/* Centrer les carrousels */
+#carousel1-container,
+#carousel2-container,
+#carousel3-container {
+  margin: 0 auto;
+}
+
+/* Responsive pour tablettes et mobiles */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+  video, img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  #carousel3-container {
+    width: 100% !important;
+  }
+  section {
+    padding: 2em 1em;
+  }
+  header h1 {
+    font-size: 1.8em;
+  }
+}

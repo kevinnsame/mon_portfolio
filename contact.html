@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Kévin Nsamè</title>
+
+  <!-- Google Fonts (identique à index.html) -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Animation subtile fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Conteneur principal */
+    .contact-container {
+      max-width: 800px;
+      margin: 3em auto;
+      background-color: #1a1a1a;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 60, 172, 0.2);
+    }
+
+    /* Titre */
+    .contact-container h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #ff3cac;
+      text-shadow: 0 0 10px #ff3cac;
+      text-align: center;
+      margin-bottom: 0.5em;
+    }
+
+    /* Texte d'intro */
+    .contact-text {
+      text-align: justify;
+      font-family: 'Poppins', sans-serif;
+      color: #e0e0e0;
+      margin-bottom: 2em;
+      line-height: 1.7;
+    }
+
+    /* Formulaire */
+    form {
+      display: grid;
+      gap: 1em;
+    }
+    input, textarea {
+      background-color: #0f0f0f;
+      border: 1px solid rgba(255, 60, 172, 0.4);
+      color: white;
+      padding: 0.8em;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1em;
+      transition: all 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      border-color: #ff3cac;
+      box-shadow: 0 0 8px #ff3cac;
+      outline: none;
+    }
+
+    /* Bouton envoyer */
+    button {
+      background-color: transparent;
+      border: 2px solid #ff3cac;
+      color: #ff3cac;
+      padding: 0.8em 1.5em;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: 'Poppins', sans-serif;
+    }
+    button:hover {
+      background-color: #ff3cac;
+      color: #0f0f0f;
+      box-shadow: 0 0 15px #ff3cac;
+    }
+
+    /* Infos de contact centrées */
+    .contact-info {
+      margin-top: 2em;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+    .contact-info p {
+      margin: 0.5em 0;
+      color: #ccc;
+      text-align: center;
+    }
+    .contact-info a {
+      color: #ff3cac;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-shadow: 0 0 8px #ff3cac;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contactez <span class="highlight">Kévin Nsamè</span></h1>
+    <p>chef de projet digital • Créatif • Innovateur</p>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="projets.html">Projets</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-container fade-in">
+    <h1>Travaillons ensemble</h1>
+    <p class="contact-text">
+      Chaque collaboration est pour moi l'occasion de transformer une idée en un projet concret et impactant.  
+      Que vous ayez besoin d'un site web immersif, d'une stratégie digitale sur-mesure ou d'un accompagnement créatif,  
+      je suis prêt à mettre mes compétences au service de vos ambitions.  
+      Parlez-moi de votre vision et faisons-la évoluer ensemble.
+    </p>
+
+    <form action="https://formspree.io/f/myzplbpa" method="POST">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre e-mail" required>
+      <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+      <button type="submit">Envoyer le message</button>
+    </form>
+
+    <div class="contact-info">
+      <p><strong>Email :</strong> kevinsame99@gmail.com</p>
+      <p><strong>Téléphone :</strong> +33 6 95 82 24 79</p>
+      <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/kevin-nsame-89b61b1b2/" target="_blank">Kévin Nsamè</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Kevin Nsamè - Tous droits réservés</p>
+  </footer>
+</body>
+</html>

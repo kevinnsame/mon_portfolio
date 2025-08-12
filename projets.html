@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Override du padding des sections pour cette page */
+    section {
+      padding: 2em 1em !important;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    /* Styles spécifiques à la page projets */
+    .intro-text {
+      max-width: 100%;
+      margin: 0; 
+      text-align: left;    
+      text-align: justify; 
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 20px; 
+      margin-top: 2em;
+    }
+
+    .videos-grid video {
+      width: 100%;
+      height: 300px;          
+      object-fit: contain;    
+      border-radius: 10px;
+      border: 1px solid rgba(255, 60, 172, 0.3);
+      background-color: black; 
+      display: block;
+    }
+
+    /* Styles pour l'alignement parfait */
+    .project-container {
+      max-width: 100%;
+      margin: 0; 
+    }
+
+    .project-description {
+      max-width: 100%;
+      margin-bottom: 25px;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+      text-align: justify;
+      margin-left: 0 !important; 
+    }
+
+    .carousel-container {
+      position: relative; 
+      width: 700px; 
+      overflow: hidden; 
+      margin: 0; 
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      section {
+        padding: 1.5em 0.5em !important;
+      }
+      
+      .carousel-container {
+        width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mes Projets</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="projets.html">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <div class="intro-text">
+      <p>
+        Professionnel du digital, j'ai développé mon expertise à travers des missions concrètes pour diverses entreprises et organisations. 
+        Ces expériences m'ont permis d'intervenir sur toutes les étapes de la présence en ligne : conception visuelle, mise en ligne, suivi et optimisation des performances.
+      </p>
+      <p>
+        Je conçois et administre des sites internet en associant créativité et maîtrise technique. Mes compétences en HTML, CSS, JavaScript et Python 
+        me permettent de réaliser des interfaces modernes, performantes et adaptées aux besoins des utilisateurs.
+      </p>
+      <p>
+        Au-delà du développement, je conçois et pilote des campagnes publicitaires sur les principaux canaux digitaux : LinkedIn Ads, Meta Ads (Facebook & Instagram) et Google Ads. 
+        Mon objectif est clair : accroître la visibilité, générer des leads qualifiés et optimiser le retour sur investissement.
+      </p>
+      <p>
+        J'accorde une importance particulière au suivi des performances grâce aux outils d'analytics, ce qui me permet d'identifier rapidement les leviers de croissance et d'ajuster les stratégies en temps réel.
+      </p>
+      <p>
+        Toujours en veille sur les nouvelles tendances, j'intègre dans mes projets les meilleures pratiques du référencement naturel (SEO), de l'email marketing et de l'automatisation marketing, 
+        afin d'offrir des solutions digitales complètes et performantes.
+      </p>
+      <p>
+        Chaque projet est pour moi l'occasion de transformer une idée en un résultat concret, durable et mesurable.
+      </p>
+
+      <button onclick="window.location.href='contact.html'" style="display: inline-block; margin-top: 1em;">Me Contacter</button>
+    </div>
+  </section>
+
+  <section id="projet1">
+    <div class="project-container">
+      <h2>Projet 1 - Créations visuelles</h2>
+      <p class="project-description">
+        L'ensemble de ces créations visuelles a été réalisé dans le cadre de mon expérience professionnelle chez AMADA Europe. 
+        Chaque projet illustre mon expertise en conception graphique, animation et production de contenus visuels à forte valeur ajoutée.
+      </p>
+      <div class="carousel-container" id="carousel1-container">
+        <div id="carousel1-track" style="
+          display: flex;
+          transition: transform 0.5s ease;
+          width: max-content;
+          cursor: grab;
+        ">
+          <video width="600" height="340" muted autoplay loop style="flex-shrink: 0; margin-right: 20px;">
+            <source src="assets/videos/application_animated-EN.mp4" type="video/mp4" />
+          </video>
+          <video width="600" height="340" muted autoplay loop style="flex-shrink: 0; margin-right: 20px;">
+            <source src="assets/videos/EM-ZRsystemup-ezgif.com-video-to-mp4-converter.mp4" type="video/mp4" />
+          </video>
+          <video width="600" height="340" muted autoplay loop style="flex-shrink: 0; margin-right: 20px;">
+            <source src="assets/videos/Post1V3.mp4" type="video/mp4" />
+          </video>
+          <video width="600" height="340" muted autoplay loop style="flex-shrink: 0; margin-right: 20px;">
+            <source src="assets/videos/Post2V6.mp4" type="video/mp4" />
+          </video>
+          <video width="600" height="340" muted autoplay loop style="flex-shrink: 0; margin-right: 20px;">
+            <source src="assets/videos/Post3V5.mp4" type="video/mp4" />
+          </video>
+          <video width="600" height="340" muted autoplay loop style="flex-shrink: 0; margin-right: 20px;">
+            <source src="assets/videos/VENTIS3015AJ+ASFII3015EU+TKII3015EU_ANO_GO24.mp4" type="video/mp4" />
+          </video>
+        </div>
+        
+        <!-- Flèches simples blanches -->
+        <button id="prevBtn" aria-label="Vidéo précédente" style="
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(-50%, -50%);
+          background: transparent;
+          border: none;
+          color: white;
+          font-size: 40px;
+          cursor: pointer;
+          z-index: 10;
+          user-select: none;
+        ">&#10094;</button>
+        
+        <button id="nextBtn" aria-label="Vidéo suivante" style="
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(50%, -50%);
+          background: transparent;
+          border: none;
+          color: white;
+          font-size: 40px;
+          cursor: pointer;
+          z-index: 10;
+          user-select: none;
+        ">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="projet2">
+    <div class="project-container">
+      <h2>Projet 2 - Création et administration des sites internet</h2>
+      <p class="project-description">
+        Voici une sélection de sites web que j'ai conçus ou administrés. Certains ont été réalisés dans le cadre de ma formation académique, tandis que d'autres sont issus de missions professionnelles en entreprise, alliant rigueur technique et créativité.
+      </p>
+      <div class="carousel-container" id="carousel2-container">
+        <div id="carousel2-track" style="
+          display: flex;
+          transition: transform 1s ease;
+          width: max-content;
+          cursor: grab;
+        ">
+          <video width="600" height="340" muted autoplay loop style="flex-shrink: 0; margin-right: 20px;">
+            <source src="assets/videos/Etikashion.mp4" type="video/mp4" />
+          </video>
+          <video width="600" height="340" muted autoplay loop style="flex-shrink: 0; margin-right: 20px;">
+            <source src="assets/videos/sfdc.mp4" type="video/mp4" />
+          </video>
+          <video width="600" height="340" muted autoplay loop style="flex-shrink: 0; margin-right: 20px;">
+            <source src="assets/videos/amada_eu.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- Flèches simples blanches -->
+        <button id="prevBtn2" aria-label="Vidéo précédente" style="
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(-50%, -50%);
+          background: transparent;
+          border: none;
+          color: white;
+          font-size: 40px;
+          cursor: pointer;
+          z-index: 10;
+          user-select: none;
+        ">&#10094;</button>
+
+        <button id="nextBtn2" aria-label="Vidéo suivante" style="
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(50%, -50%);
+          background: transparent;
+          border: none;
+          color: white;
+          font-size: 40px;
+          cursor: pointer;
+          z-index: 10;
+          user-select: none;
+        ">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="projet3">
+    <div class="project-container">
+      <h2>Projet 3 - Langages de programmation et webmarketing</h2>
+      <p class="project-description">
+        Je maîtrise les langages HTML et CSS, essentiels pour développer des sites web structurés et attractifs, adaptés à tous les supports. Cette expertise technique est complétée par une bonne connaissance de plusieurs outils de webmarketing, me permettant d'optimiser la stratégie digitale, d'analyser le trafic et d'améliorer la conversion. Cette combinaison me rend efficace dans la création et la gestion de projets web performants.
+      </p>
+
+      <div class="carousel-container" id="carousel3-container">
+        <div id="carousel3-track" style="
+          display: flex;
+          transition: transform 0.5s ease;
+          width: max-content;
+          cursor: grab;
+        ">
+          <video width="600" height="340" muted autoplay loop style="flex-shrink: 0; margin-right: 20px;">
+            <source src="assets/videos/html_&_css.mp4" type="video/mp4" />
+          </video>
+          <img src="assets/images/ga.png" alt="Google Analytics" width="600" height="340" style="flex-shrink: 0; margin-right: 20px; object-fit: contain;" />
+          <img src="assets/images/ads.png" alt="Ads" width="600" height="340" style="flex-shrink: 0; margin-right: 20px; object-fit: contain;" />
+        </div>
+
+        <!-- Flèches simples blanches -->
+        <button id="prevBtn3" aria-label="Image/Vidéo précédente" style="
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(-50%, -50%);
+          background: transparent;
+          border: none;
+          color: white;
+          font-size: 40px;
+          cursor: pointer;
+          z-index: 10;
+          user-select: none;
+        ">&#10094;</button>
+
+        <button id="nextBtn3" aria-label="Image/Vidéo suivante" style="
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(50%, -50%);
+          background: transparent;
+          border: none;
+          color: white;
+          font-size: 40px;
+          cursor: pointer;
+          z-index: 10;
+          user-select: none;
+        ">&#10095;</button>
+      </div>
+
+      <!-- Bouton aligné à gauche sous le carousel -->
+      <div style="margin-top: 1em;">
+        <button onclick="window.location.href='contact.html'" style="display: inline-block;">
+          Me Contacter
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const track1 = document.getElementById('carousel1-track');
+    const videos1 = track1.children;
+    const videoWidth1 = 620; // 600 + 20 margin-right
+    let index1 = 0;
+    const total1 = videos1.length;
+
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let autoSlideInterval;
+    const slideDelay = 60000; // 60 secondes
+
+    function updateSlide() {
+      track1.style.transform = `translateX(${-videoWidth1 * index1}px)`;
+    }
+
+    function slideNext() {
+      index1 = (index1 + 1) % total1;
+      updateSlide();
+    }
+
+    function slidePrev() {
+      index1 = (index1 - 1 + total1) % total1;
+      updateSlide();
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(slideNext, slideDelay);
+    }
+
+    prevBtn.addEventListener('click', () => {
+      slidePrev();
+      resetAutoSlide();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      slideNext();
+      resetAutoSlide();
+    });
+
+    // Démarrer l'auto slide
+    autoSlideInterval = setInterval(slideNext, slideDelay);
+  </script>
+
+  <script>
+    const track2 = document.getElementById('carousel2-track');
+    const videos2 = track2.children;
+    const videoWidth2 = 620; // largeur vidéo + marge (600 + 20)
+    let index2 = 0;
+    const total2 = videos2.length;
+
+    const prevBtn2 = document.getElementById('prevBtn2');
+    const nextBtn2 = document.getElementById('nextBtn2');
+
+    function updateSlide2() {
+      track2.style.transform = `translateX(${-videoWidth2 * index2}px)`;
+    }
+
+    function slideNext2() {
+      index2 = (index2 + 1) % total2;
+      updateSlide2();
+    }
+
+    function slidePrev2() {
+      index2 = (index2 - 1 + total2) % total2;
+      updateSlide2();
+    }
+
+    prevBtn2.addEventListener('click', () => {
+      slidePrev2();
+      resetAutoSlide2();
+    });
+
+    nextBtn2.addEventListener('click', () => {
+      slideNext2();
+      resetAutoSlide2();
+    });
+
+    let autoSlideInterval2;
+    const slideDelay2 = 60000; // 60 secondes
+
+    function resetAutoSlide2() {
+      clearInterval(autoSlideInterval2);
+      autoSlideInterval2 = setInterval(slideNext2, slideDelay2);
+    }
+
+    // Démarrage auto slide
+    autoSlideInterval2 = setInterval(slideNext2, slideDelay2);
+  </script>
+
+  <script>
+    const track3 = document.getElementById('carousel3-track');
+    const items3 = track3.children;
+    const itemWidth3 = 620; // 600 largeur + 20 marge droite
+    let index3 = 0;
+    const total3 = items3.length;
+
+    const prevBtn3 = document.getElementById('prevBtn3');
+    const nextBtn3 = document.getElementById('nextBtn3');
+
+    prevBtn3.addEventListener('click', () => {
+      index3 = (index3 - 1 + total3) % total3;
+      track3.style.transform = `translateX(${-itemWidth3 * index3}px)`;
+    });
+
+    nextBtn3.addEventListener('click', () => {
+      index3 = (index3 + 1) % total3;
+      track3.style.transform = `translateX(${-itemWidth3 * index3}px)`;
+    });
+  </script>
+
+  <footer>
+    <p>© 2025 Kevin Nsamè - Tous droits réservés</p>
+  </footer>
+</body>
+</html>
