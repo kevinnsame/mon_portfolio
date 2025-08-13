@@ -8,108 +8,282 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0f0f0f;
+      color: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .highlight {
+      color: #ff3cac;
+      text-shadow: 0 0 10px #ff3cac;
+    }
+
+    header {
+      text-align: center;
+      padding: 3em 1em;
+      background: linear-gradient(135deg, #ff3cac, #784ba0, #2b86c5);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #e0e0e0;
+    }
+
+    nav {
+      margin-top: 1em;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff3cac;
+      text-shadow: 0 0 8px #ff3cac;
+    }
+
+    /* Sections centrées mais texte aligné à gauche */
+    section {
+      padding: 3em 2em;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    section p {
+      text-align: justify;
+      margin-bottom: 1.5em;
+    }
+
+    h2 a:hover {
+      color: #ff3cac;  
+      cursor: pointer;
+      text-decoration: none;
+      text-shadow: 0 0 8px #ff3cac;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+    }
+
+    .project-card {
+      background-color: #1a1a1a;
+      padding: 1.5em;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255, 60, 172, 0.3);
+      min-height: 150px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #ff3cac;
+    }
+
+    button {
+      display: inline-block;
+      background-color: transparent;
+      border: 2px solid #ff3cac;
+      color: #ff3cac;
+      padding: 0.8em 1.5em;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff3cac;
+      color: #0f0f0f;
+      box-shadow: 0 0 15px #ff3cac;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      color: #b3b3b3;
+      border-top: 1px solid #333;
+    }
+
+    /* RESPONSIVE STYLES */
+    @media (max-width: 768px) {
+      header {
+        padding: 2em 1em;
+      }
+      
+      header h1 {
+        font-size: 1.8em;
+      }
+      
+      header p {
+        font-size: 1em;
+      }
+      
+      nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+      }
+      
+      section {
+        padding: 2em 1em;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1em;
+      }
+      
+      /* Style responsive pour la section à propos */
+      #about > div {
+        flex-direction: column !important;
+        gap: 20px !important;
+      }
+      
+      #about img {
+        width: 60% !important;
+        max-width: 200px !important;
+        align-self: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      
+      nav a {
+        display: block;
+        margin: 0.5em 0;
+      }
+      
+      section {
+        padding: 1.5em 0.5em;
+      }
+      
+      button {
+        width: 100%;
+        padding: 1em;
+      }
+      
+      #about img {
+        width: 80% !important;
+        max-width: 250px !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-  <h1>Bienvenue, je suis <span class="highlight">Kévin Nsamè</span></h1>
-  <p>chef de projet digital • Créatif • Innovateur</p>
-  <nav>
-    <a href="#about">À propos</a>
-    <a href="projets.html">Projets</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
+    <h1>Bienvenue, je suis <span class="highlight">Kévin Nsamè</span></h1>
+    <p>chef de projet digital • Créatif • Innovateur</p>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="projets.html">Projets</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
   <section id="about" style="text-align: justify;">
-  <h2 style="text-align: left;">À propos</h2>
+    <h2 style="text-align: left;">À propos</h2>
 
-  <div style="display: flex; align-items: center; gap: 30px;">
-    
-    <!-- Bloc texte -->
-    <div style="flex: 1;">
-      <p>
-        Je suis Kevin Nsamè, un professionnel engagé de 25 ans, passionné par le digital, le storytelling et l’innovation. Mon objectif est de créer des expériences digitales pertinentes qui connectent durablement les marques à leurs audiences.
-      </p>
-      <p>
-        Mon parcours a débuté en 2020 dans l’assurance, où j’ai appris l’importance de l’écoute, de la compréhension client et de la confiance. Rapidement, je me suis orienté vers le marketing digital, convaincu que chaque projet est une opportunité de raconter une histoire impactante.
-      </p>
-      <p>
-        De la création de contenus à la maîtrise des outils SEO, SEA et analytics, j’ai développé un savoir-faire alliant créativité et rigueur. Jusqu’en janvier 2025, j’ai occupé le poste de Chargé de Marketing Digital chez AMADA Europe, où j’ai piloté des projets innovants en conjuguant stratégie et technique, tout en poursuivant mes formations pour rester à la pointe des évolutions numériques.
-      </p>
-      <p>
-        Aujourd’hui, je suis à la recherche d’une nouvelle opportunité professionnelle où je pourrai mettre à profit mes compétences, mon sens du relationnel et ma capacité d’adaptation, afin de contribuer efficacement à la réussite des projets digitaux.
-      </p>
+    <div style="display: flex; align-items: center; gap: 30px;">
+      
+      <!-- Bloc texte -->
+      <div style="flex: 1;">
+        <p>
+          Je suis Kevin Nsamè, un professionnel engagé de 25 ans, passionné par le digital, le storytelling et l'innovation. Mon objectif est de créer des expériences digitales pertinentes qui connectent durablement les marques à leurs audiences.
+        </p>
+        <p>
+          Mon parcours a débuté en 2020 dans l'assurance, où j'ai appris l'importance de l'écoute, de la compréhension client et de la confiance. Rapidement, je me suis orienté vers le marketing digital, convaincu que chaque projet est une opportunité de raconter une histoire impactante.
+        </p>
+        <p>
+          De la création de contenus à la maîtrise des outils SEO, SEA et analytics, j'ai développé un savoir-faire alliant créativité et rigueur. Jusqu'en janvier 2025, j'ai occupé le poste de Chargé de Marketing Digital chez AMADA Europe, où j'ai piloté des projets innovants en conjuguant stratégie et technique, tout en poursuivant mes formations pour rester à la pointe des évolutions numériques.
+        </p>
+        <p>
+          Aujourd'hui, je suis à la recherche d'une nouvelle opportunité professionnelle où je pourrai mettre à profit mes compétences, mon sens du relationnel et ma capacité d'adaptation, afin de contribuer efficacement à la réussite des projets digitaux.
+        </p>
 
-      <!-- Bouton Télécharger CV -->
-   <a href="assets/docs/Marketing_&_Communication_digital.pdf" download style="
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: transparent;
-  color: #ff3cac;
-  border: 2px solid #ff3cac;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(255, 60, 172, 0.4);
-  transition: all 0.3s ease;
-" 
-onmouseover="this.style.backgroundColor='#ff3cac'; this.style.color='white'; this.style.boxShadow='0 6px 16px rgba(255, 60, 172, 0.6)';" 
-onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ff3cac'; this.style.boxShadow='0 4px 12px rgba(255, 60, 172, 0.4)';">
-  Télécharger mon CV
-</a>
-
-
+        <!-- Bouton Télécharger CV -->
+        <a href="assets/docs/Marketing_&_Communication_digital.pdf" download style="
+          display: inline-block;
+          padding: 12px 20px;
+          background-color: transparent;
+          color: #ff3cac;
+          border: 2px solid #ff3cac;
+          text-decoration: none;
+          border-radius: 5px;
+          font-weight: bold;
+          box-shadow: 0 4px 12px rgba(255, 60, 172, 0.4);
+          transition: all 0.3s ease;
+        " 
+        onmouseover="this.style.backgroundColor='#ff3cac'; this.style.color='white'; this.style.boxShadow='0 6px 16px rgba(255, 60, 172, 0.6)';" 
+        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ff3cac'; this.style.boxShadow='0 4px 12px rgba(255, 60, 172, 0.4)';">
+          Télécharger mon CV
+        </a>
+      </div>
+      
+      <!-- Bloc image -->
+      <div style="flex: 0 0 300px;">
+        <img src="assets/images/profil_portfolio.png" alt="Photo de profil" style="width: 84%; height: auto; border-radius: 8px;">
+      </div>
     </div>
-    <!-- Bloc image -->
-    <div style="flex: 0 0 300px;">
-      <img src="assets/images/profil_portfolio.png" alt="Photo de profil" style="width: 84%; height: auto; border-radius: 8px;">
+  </section>
+
+  <section id="projects">
+    <h2><a href="projets.html" style="color: inherit; text-decoration: none;">Projets</a></h2>
+
+    <div class="projects-grid">
+      <a href="projets.html#projet1" style="text-decoration: none; color: inherit;">
+        <div class="project-card">
+          <h3>Projet 1</h3> 
+          <p>Créations visuelles.</p>
+        </div>
+      </a>
+
+      <a href="projets.html#projet2" style="text-decoration: none; color: inherit;">
+        <div class="project-card">
+          <h3>Projet 2</h3>
+          <p>Création et administration des sites internet.</p>
+        </div>
+      </a>
+
+      <a href="projets.html#projet3" style="text-decoration: none; color: inherit;">
+        <div class="project-card">
+          <h3>Projet 3</h3>
+          <p>Langages de programmation et webmarketing.</p>
+        </div>
+      </a>
     </div>
-
-  </div>
-</section>
-
-
-
-
-
- <section id="projects">
-  <h2><a href="projets.html" style="color: inherit; text-decoration: none;">Projets</a></h2>
-
-  <div class="projects-grid">
-    <a href="projets.html#projet1" style="text-decoration: none; color: inherit;">
-  <div class="project-card">
-    <h3>Projet 1</h3> 
-    <p>Créations visuelles.</p>
-  </div>
-</a>
-
-    <a href="projets.html#projet2" style="text-decoration: none; color: inherit;">
-  <div class="project-card">
-    <h3>Projet 2</h3>
-    <p>Création et administration des sites internet.</p>
-  </div>
-</a>
-
-    <a href="projets.html#projet2" style="text-decoration: none; color: inherit;">
-    <div class="project-card">
-      <h3>Projet 3</h3>
-      <p>Langages de programmation et webmarketing.</p>
-    </div>
-  </div>
-</section>
-
-
-
+  </section>
 
   <section id="contact">
-  <h2><a href="contact.html" style="color: inherit; text-decoration: none;">contact</a></h2>
-  <p>Vous voulez collaborer ? Écrivez-moi !</p>
-  <button onclick="window.location.href='contact.html'">Me Contacter</button>
-</section>
-
+    <h2><a href="contact.html" style="color: inherit; text-decoration: none;">contact</a></h2>
+    <p>Vous voulez collaborer ? Écrivez-moi !</p>
+    <button onclick="window.location.href='contact.html'">Me Contacter</button>
+  </section>
 
   <footer>
     <p>© 2025 Kevin Nsamè - Tous droits réservés</p>

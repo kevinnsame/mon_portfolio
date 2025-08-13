@@ -1,146 +1,677 @@
+/* Styles de base (ton design original) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  background-color: #0f0f0f;
-  color: #f5f5f5;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-h1, h2, h3 {
-  font-family: 'Orbitron', sans-serif;
-}
-
-.highlight {
-  color: #ff3cac;
-  text-shadow: 0 0 10px #ff3cac;
-}
-
+/* Header avec dégradé original */
 header {
-  text-align: center;
-  padding: 3em 1em;
-  background: linear-gradient(135deg, #ff3cac, #784ba0, #2b86c5);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.2em;
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 60, 172, 0.3), rgba(120, 119, 198, 0.3));
+    z-index: 1;
 }
 
-header p {
-  font-size: 1.2em;
-  color: #e0e0e0;
+header * {
+    position: relative;
+    z-index: 2;
 }
 
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(255, 60, 172, 0.8);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navigation */
 nav {
-  margin-top: 1em;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
-nav a:hover {
-  color: #ff3cac;
-  text-shadow: 0 0 8px #ff3cac;
+nav a:hover, nav a.active {
+    background-color: #ff3cac;
+    box-shadow: 0 0 20px rgba(255, 60, 172, 0.6);
+    transform: translateY(-2px);
 }
 
-/* Sections centrées mais texte aligné à gauche */
-section {
-  padding: 3em 2em;       /* espace intérieur */
-  max-width: 1000px;      /* largeur max */
-  margin: 0 auto;         /* centre le bloc */
-  text-align: left;       /* texte aligné à gauche */
+/* Section principale */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
-section p {
-  text-align: justify;    /* justifie le texte */
-  margin-bottom: 1.5em;
+/* Section À propos */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 60, 172, 0.1), rgba(120, 119, 198, 0.1));
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
 }
 
-h2 a:hover {
-  color: #ff3cac;  
-  cursor: pointer;
-  text-decoration: none;
-  text-shadow: 0 0 8px #ff3cac;
+.about-text {
+    flex: 2;
 }
 
+.about-text h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ff3cac, #7877c6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ff3cac;
+    box-shadow: 0 0 30px rgba(255, 60, 172, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Grille de projets */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .project-card {
-  background-color: #1a1a1a;
-  padding: 1.5em;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 60, 172, 0.3);
-  min-height: 150px; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border-radius: 15px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 60, 172, 0.3);
+    transition: all 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px #ff3cac;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 60, 172, 0.3);
 }
 
-button {
-  display: inline-block;
-  background-color: transparent;
-  border: 2px solid #ff3cac;
-  color: #ff3cac;
-  padding: 0.8em 1.5em;
-  font-size: 1em;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+.project-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ff3cac;
 }
 
-button:hover {
-  background-color: #ff3cac;
-  color: #0f0f0f;
-  box-shadow: 0 0 15px #ff3cac;
+/* Boutons */
+.btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff3cac, #7877c6);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
 }
 
-footer {
-  text-align: center;
-  padding: 1em;
-  font-size: 0.9em;
-  color: #b3b3b3;
-  border-top: 1px solid #333;
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 60, 172, 0.4);
 }
 
-/* Centrer les carrousels */
-#carousel1-container,
-#carousel2-container,
-#carousel3-container {
-  margin: 0 auto;
+/* Pages projets - Sections et Carrousels */
+.project-section {
+    margin-bottom: 4rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 60, 172, 0.2);
 }
 
-/* Responsive pour tablettes et mobiles */
+.project-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff3cac;
+    text-align: center;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* CARROUSELS - Styles CORRIGÉS pour tous les écrans */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #1a1a1a;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    flex-shrink: 0;
+}
+
+/* VIDÉOS - Styles responsive CORRIGÉS */
+.carousel-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 par défaut */
+    height: 0;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 60, 172, 0.3);
+}
+
+.carousel-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* IMAGES dans les carrousels */
+.carousel-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 60, 172, 0.3);
+}
+
+/* Navigation des carrousels */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 60, 172, 0.8);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.carousel-nav:hover {
+    background: #ff3cac;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav.prev {
+    left: 10px;
+}
+
+.carousel-nav.next {
+    right: 10px;
+}
+
+/* Page contact */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 60, 172, 0.3);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ff3cac;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 60, 172, 0.3);
+    border-radius: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff3cac;
+    box-shadow: 0 0 15px rgba(255, 60, 172, 0.3);
+}
+
+/* MEDIA QUERIES RESPONSIVE CORRIGÉES */
+
+/* Tablettes (768px et moins) */
 @media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1em;
-  }
-  video, img {
-    width: 100% !important;
-    height: auto !important;
-  }
-  #carousel3-container {
-    width: 100% !important;
-  }
-  section {
-    padding: 2em 1em;
-  }
-  header h1 {
-    font-size: 1.8em;
-  }
+    /* Header */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Navigation */
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    nav a {
+        display: block;
+        text-align: center;
+        min-width: 120px;
+    }
+    
+    /* Section À propos */
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+    
+    .about-text h2 {
+        font-size: 2rem;
+    }
+    
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    /* Grille de projets */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Carrousels - CORRECTION TABLETTE */
+    .carousel-container {
+        max-width: 100%;
+        margin: 1.5rem 0;
+    }
+    
+    .carousel-video {
+        padding-bottom: 56.25%; /* Ratio 16:9 STANDARD pour tablette */
+    }
+    
+    .carousel-image {
+        height: 300px;
+    }
+    
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .carousel-nav.prev {
+        left: 5px;
+    }
+    
+    .carousel-nav.next {
+        right: 5px;
+    }
+    
+    /* Sections projet */
+    .project-section {
+        padding: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .project-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Main container */
+    main {
+        padding: 1rem;
+    }
+}
+
+/* Mobiles (480px et moins) */
+@media (max-width: 480px) {
+    /* Header */
+    header {
+        padding: 1.5rem 0;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    /* Navigation */
+    nav {
+        padding: 0.8rem 0;
+    }
+    
+    nav ul {
+        gap: 0.8rem;
+    }
+    
+    nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Section À propos */
+    .about-section {
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* Cards projet */
+    .project-card {
+        padding: 1rem;
+    }
+    
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Boutons */
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+    }
+    
+    /* CARROUSELS MOBILES - CORRECTION COMPLÈTE */
+    .carousel-container {
+        width: 100%;
+        margin: 1rem -1rem;
+        border-radius: 10px;
+    }
+    
+    /* Vidéos sur mobile - CORRECTION IMPORTANTE */
+    .carousel-video {
+        padding-bottom: 56.25%; /* Ratio 16:9 maintenu sur mobile */
+        margin: 0.5rem;
+        border-width: 1px;
+    }
+    
+    .carousel-video iframe {
+        border-radius: 5px;
+        min-height: 200px; /* Hauteur minimale garantie */
+        background: #000;
+    }
+    
+    /* Images sur mobile */
+    .carousel-image {
+        height: 220px;
+        border-radius: 5px;
+        margin: 0.5rem;
+    }
+    
+    /* Navigation carrousel mobile */
+    .carousel-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+        background: rgba(255, 60, 172, 0.9);
+    }
+    
+    .carousel-nav.prev {
+        left: 2px;
+    }
+    
+    .carousel-nav.next {
+        right: 2px;
+    }
+    
+    /* Sections projet */
+    .project-section {
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .project-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .project-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Contact */
+    .contact-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+    
+    /* Main container */
+    main {
+        padding: 0.5rem;
+    }
+}
+
+/* CORRECTION SPÉCIALE DESKTOP - RÈGLES IMPORTANTES */
+@media (min-width: 769px) {
+    .carousel-container {
+        max-width: 800px;
+    }
+    
+    /* CORRECTION PRINCIPALE : Ratio vidéo adapté pour DESKTOP */
+    .carousel-video {
+        padding-bottom: 45%; /* Ratio optimisé pour desktop - CORRECTION CLÉE */
+    }
+    
+    .carousel-image {
+        height: 400px;
+    }
+    
+    .carousel-nav {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .carousel-nav.prev {
+        left: 15px;
+    }
+    
+    .carousel-nav.next {
+        right: 15px;
+    }
+}
+
+/* CORRECTIONS SPÉCIALES POUR VIDÉOS YOUTUBE */
+@media (max-width: 480px) {
+    .carousel-video iframe {
+        /* Force l'affichage des contrôles sur mobile */
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    /* Assure que les vidéos ne soient pas masquées */
+    .carousel-item {
+        min-height: 200px;
+        padding: 0.5rem;
+    }
+}
+
+/* Extra: Amélioration de performance sur mobile */
+@media (max-width: 768px) {
+    .carousel-video iframe {
+        /* Précharge moins d'éléments sur mobile */
+        loading: lazy;
+    }
+    
+    /* Transition plus douce sur mobile */
+    .carousel {
+        transition: transform 0.4s ease-out;
+    }
+}
+
+/* NOUVELLES RÈGLES POUR LE SYSTÈME UNIFIÉ */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+/* Boutons du carrousel - Version projets.html */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 60, 172, 0.8);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #ff3cac;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
 }

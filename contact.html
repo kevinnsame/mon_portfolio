@@ -8,9 +8,57 @@
   <!-- Google Fonts (identique à index.html) -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
-
   <style>
+    body {
+      margin: 0;
+      background-color: #0f0f0f;
+      color: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .highlight {
+      color: #ff3cac;
+      text-shadow: 0 0 10px #ff3cac;
+    }
+
+    header {
+      text-align: center;
+      padding: 3em 1em;
+      background: linear-gradient(135deg, #ff3cac, #784ba0, #2b86c5);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #e0e0e0;
+    }
+
+    nav {
+      margin-top: 1em;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff3cac;
+      text-shadow: 0 0 8px #ff3cac;
+    }
+
     /* Animation subtile fade-in */
     .fade-in {
       opacity: 0;
@@ -108,6 +156,87 @@
     }
     .contact-info a:hover {
       text-shadow: 0 0 8px #ff3cac;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      color: #b3b3b3;
+      border-top: 1px solid #333;
+    }
+
+    /* RESPONSIVE STYLES */
+    @media (max-width: 768px) {
+      header {
+        padding: 2em 1em;
+      }
+      
+      header h1 {
+        font-size: 1.8em;
+      }
+      
+      header p {
+        font-size: 1em;
+      }
+      
+      nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+      }
+      
+      .contact-container {
+        margin: 2em 1em;
+        padding: 1.5em;
+      }
+      
+      .contact-container h1 {
+        font-size: 1.8em;
+      }
+      
+      .contact-text {
+        font-size: 0.95em;
+        line-height: 1.6;
+      }
+      
+      input, textarea {
+        font-size: 0.9em;
+        padding: 0.7em;
+      }
+      
+      button {
+        width: 100%;
+        padding: 1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      
+      nav a {
+        display: block;
+        margin: 0.5em 0;
+      }
+      
+      .contact-container {
+        margin: 1em 0.5em;
+        padding: 1em;
+      }
+      
+      .contact-container h1 {
+        font-size: 1.5em;
+      }
+      
+      .contact-text {
+        font-size: 0.9em;
+        text-align: left;
+      }
+      
+      .contact-info {
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
